@@ -377,6 +377,22 @@
     <script src="js/front.js"></script>
     <script src="js/typeit.min.js"></script>
 
+    <!-- Preloader -->
+    <script>
+      var loader = document.querySelector(".loader")
+      function sleep(ms) {
+        return new Promise(
+          resolve => setTimeout(resolve, ms)
+        );
+      }
+
+      window.addEventListener("load", vanish);
+      
+      function vanish() {
+        loader.classList.add("disappear")
+      }      
+    </script>
+
     <!-- TypeWriter -->
     <script>
         // introduction
