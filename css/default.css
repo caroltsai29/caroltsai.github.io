@@ -12,6 +12,31 @@
 }
 
 
+.loader {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.disappear {
+    animation: vanish 1s forwards;
+}
+
+@keyframes vanish {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
 h1, h2, h3, h4, h5, h6, strong, p, li {
     color: var(--mainText);
 }
