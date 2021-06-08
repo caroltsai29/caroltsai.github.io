@@ -22,7 +22,7 @@
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="css/default.css">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="img/logo2.png">
+    <link rel="shortcut icon" href="img/icons/favicon.png">
     <!-- Leaflet CSS - For the map-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css">
     <!-- Tweaks for older IEs-->
@@ -32,10 +32,37 @@
     -->
   </head>
   <body>
+    
     <div class="loader">
-      <img src="https://i.pinimg.com/originals/39/6d/8c/396d8cf19235b7b437d1067045a63b5a.gif" alt="">
+      <div class="cropped">
+        <img src="/img/loding.gif" alt="">
+      </div>
+      
+      <svg viewbox="0 0 100 20">
+        <defs>
+          <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="5%" stop-color="white"/>
+            <stop offset="95%" stop-color="red"/>
+          </linearGradient>
+          <pattern id="wave" x="0" y="0" width="120" height="20" patternUnits="userSpaceOnUse">
+            <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)"> 
+              <animateTransform
+                  attributeName="transform"
+                  begin="0s"
+                  dur="1.5s"
+                  type="translate"
+                  from="0,0"
+                  to="40,0"
+                  repeatCount="indefinite" />
+            </path>
+          </pattern>
+        </defs>
+        <text text-anchor="middle" x="50" y="15" font-size="17" fill="url(#wave)"  fill-opacity="0.6">LOADING</text>
+        <text text-anchor="middle" x="50" y="15" font-size="17" fill="url(#gradient)" fill-opacity="0.5">LOADING</text>
+      </svg>
     </div>
     
+
     <section id="intro" class="intro intro-bg">
       <div class="overlay"></div>
       <div class="content">
@@ -47,21 +74,23 @@
               <h1>My name is </br> Carol JR</h1>
               <p class="italic">A axiosimeíotos coder who live in between Thailand and Singapore.</p>
             </div>
-            
           </div>
-        </div>
+        </div> 
       </div>
 
+      
       <div class="content">
         <div class="container clearfix">
           <div class="row">
-            <div class="col-lg-8 col-md-12 mx-auto text-center">
-                <a href="#about" class="italic scroll-btn">
+            <!-- change start -->
+            <div class="col-lg-8 col-md-12 mx-auto text-center zoom">
+              <a href="#about" class="italic scroll-btn">
                 <i class="fa fa-angle-double-right"></i>
                   Click me for more info
                 <i class="fa fa-angle-double-left"></i>
               </a>
             </div>
+            <!-- change end -->
           </div>
         </div>
       </div>    
@@ -224,6 +253,7 @@
               <div class="col-md-4">
                 <div class="cardz">
                     <div class="cardz-front">
+                      <img src="img/project-img/TextCollageResult.PNG" class="card-bg">
                       <img src="img/project-img/TextCollageResult.PNG">
                     </div>
                     <div class="cardz-back">
@@ -243,6 +273,7 @@
               <div class="col-md-4">
                 <div class="cardz">
                     <div class="cardz-front">
+                      <img src="img/project-img/KimetsunoYaibaPhaser.PNG" class="card-bg">
                       <img src="img/project-img/KimetsunoYaibaPhaser.PNG">
                     </div>
                     <div class="cardz-back">
@@ -260,6 +291,7 @@
               <div class="col-md-4">
                 <div class="cardz">
                     <div class="cardz-front">
+                      <img src="img/project-img/ViewCube.PNG" class="card-bg">
                       <img src="img/project-img/ViewCube.PNG">
                     </div>
                     <div class="cardz-back">
@@ -374,19 +406,9 @@
     <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
     <script src="vendor/lightbox2/js/lightbox.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"> </script>
-    <script src="js/front.js"></script>
     <script src="js/typeit.min.js"></script>
-
-    <!-- Preloader -->
-    <script>
-      var loader = document.querySelector(".loader")
-
-      window.addEventListener("load", vanish);
-      
-      function vanish() {
-        loader.classList.add("disappear")
-      }      
-    </script>
+    <script src="js/scrolleffect.js"></script>
+    <script src="js/script.js"></script>
 
     <!-- TypeWriter -->
     <script>
@@ -438,5 +460,7 @@
         .go();
         
     </script>
+
+
   </body>
 </html>
