@@ -1,0 +1,27 @@
+:root {
+    --introbg: url('../img/bg-3.jpg');
+    
+    --mainColor: #2f3d38;
+    --secondaryColor: #30463e;
+    --thirdColor: #131b18;
+
+    --borderColor: #161914;
+
+    --mainText: #fff;
+
+    --iconcolor: white;
+
+    --socialmedia1: rgba(102,153,102,0.2);
+    --socialmedia2: rgba(102,153,102,0.3);
+    --socialmedia3: rgba(102,153,102,0.4);
+    --socialmedia4: rgba(102,153,102,0.5);
+    --socialmedia5: rgba(102,153,102,0.6);
+    --socialmedia6: rgba(102,153,102,0.7);
+    --socialmedia7: rgba(102,153,102,0.8);
+    --socialmedia8: rgba(102,153,102,0.9);
+
+    --var_svgIconFilter: invert(100%) sepia(0%) saturate(0%) hue-rotate(268deg) brightness(105%) contrast(102%);
+
+    --overlay-opacity: 0.6;
+    --overlay-bg: black;
+}
