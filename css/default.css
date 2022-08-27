@@ -263,7 +263,6 @@ h1 #nameStyle {
     opacity: 0.9;
     background-size: cover;
     height: 100vh;
-    /* z-index: -1; */
 }
 
 section.primary_content {
@@ -475,6 +474,47 @@ img.swiper-card-img {
     color: #ffffff;
 }
 
+.swiper-card-back a.text-link{
+    color: #ffffff;
+    font-size: 1rem;
+    margin-left: 0;
+    position: relative;
+    text-decoration: none;
+}
+
+a.text-link:hover {
+    background: -webkit-linear-gradient(45deg, #22c1c3, #fdbb2d);
+    background: -moz-linear-gradient(45deg, #22c1c3, #fdbb2d);
+    background: -ms-linear-gradient(45deg, #22c1c3, #fdbb2d);
+    background: -o-linear-gradient(45deg, #22c1c3, #fdbb2d);
+    background: linear-gradient(45deg, #22c1c3, #fdbb2d);
+    background: -webkit-gradient(45deg, #22c1c3, #fdbb2d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+
+a.text-link:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #7F7F7F;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+a.text-link:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
 .swiper-card-back p {
     padding: 0 1em 0 1em;
 }
@@ -503,7 +543,6 @@ img.swiper-card-img {
 }
 
 .swiper-card-back img {
-    margin-top: 1.2em;
     padding-bottom: 0.1em;
     width: 40px;
     height: 40px;
@@ -537,7 +576,6 @@ ul.social {
 
 ul.social a {
     margin: 5px 10px 5px 0;
-    /* background-color: black; */
     color: #fff;
     display: inline-block;
     width: 50px;
